@@ -1,0 +1,37 @@
+/*CREATE DATABASE automoveis;
+
+USE automoveis;
+
+CREATE TABLE TabelaMarca(
+    MarcaID INT NOT NULL AUTO_INCREMENT,
+    Nome VARCHAR(20),
+    PRIMARY KEY (MarcaID)
+);
+
+CREATE TABLE TabelaCategoria(
+    CategoriaID INT NOT NULL AUTO_INCREMENT,
+    Tipo ENUM('MOTOCICLETA', 'CARRO', 'CAMINHAO'),
+    PRIMARY KEY (CategoriaID)
+);
+
+CREATE TABLE TabelaVeiculo(
+                              VeiculoID INT NOT NULL AUTO_INCREMENT,
+                              Nome VARCHAR(20),
+                              Modelo VARCHAR(20),
+                              Ano INT,
+                              Cor VARCHAR(10),
+                              Categoria INT,
+                              Marca INT,
+                              PRIMARY KEY (VeiculoID),
+                              FOREIGN KEY (Categoria) REFERENCES TabelaCategoria(CategoriaID),
+                              FOREIGN KEY (Marca) REFERENCES TabelaMarca(MarcaID)
+);
+*/
+
+SET FOREIGN_KEY_CHECKS = 1
+
+CREATE TABLE TabelaMarca(
+                            MarcaID INT NOT NULL AUTO_INCREMENT,
+                            Nome VARCHAR(20),
+                            PRIMARY KEY (MarcaID)
+);
